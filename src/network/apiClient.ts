@@ -1,1 +1,1 @@
-export const BASE_URL='https://nft-backe.vercel.app/'
+export const BASE_URL='https://nft-backe.vercel.app'
