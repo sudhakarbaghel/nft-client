@@ -6,7 +6,18 @@ import { updateToken } from "../network/lib/token";
 import { useEffect } from "react";
 import ErrorAndSuccessModal from "./ErrorAndSuccesModal";
 
-const BuyButton = ({ contractAddress, tokenId, price }) => {
+
+interface BuyButtonProps {
+  contractAddress: string;
+  tokenId: string;
+  price: number;
+}
+
+const BuyButton: React.FC<BuyButtonProps> = ({
+  contractAddress,
+  tokenId,
+  price,
+}: BuyButtonProps) => {
   const { address } = useAccount();
   const { isOpen, onOpen, onClose } = useDisclosure(); // Hook for modal state
   const { isLoading, isError, error, write, isSuccess } = useContractWrite({
