@@ -10,7 +10,7 @@ import ErrorAndSuccessModal from "./ErrorAndSuccesModal";
 interface BuyButtonProps {
   contractAddress: string;
   tokenId: string;
-  price: number;
+  price: bigint;
 }
 
 const BuyButton: React.FC<BuyButtonProps> = ({
